@@ -202,7 +202,7 @@ class KnowledgeBase:
         """
         import numpy as np
         
-        if not self.embeddings:
+        if self.embeddings is None:
             # If embeddings aren't generated yet, return some basic commands
             return self.commands[:min(top_n, len(self.commands))]
         
